@@ -30,7 +30,7 @@ To set up the project, follow these steps:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/automation-andy101/serenity-bdd-template-project.git
+    git clone https://github.com/skasam906/assignment-gnd-api-ui.git
     cd serenity-bdd-project
     ```
 
