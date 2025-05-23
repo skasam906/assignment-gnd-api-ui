@@ -1,0 +1,42 @@
+ static ValidatableResponse response;
+    static String username;
+    static String password;
+    static String firstname = null;
+    static String lastname = null;
+    static String totalprice = null;
+    static Boolean depositpaid = null;
+    static String additionalneeds = null;
+    static String token;
+    static int id;
+    @Steps
+    BookingSteps bookingSteps;
+    @Steps
+    AuthSteps authSteps;
+
+    @Given("I am on home page")
+    public void iAmOnHomePage() {
+    }
+
+    @When("I create a new booking providing username {string} password {string}")
+    public void iCreateANewBookingProvidingUsernamePassword(String arg0, String arg1) {
+        ValidatableResponse response = authSteps.createToken(username, password);
+        token = response.extract().path("token");
+        System.out.println("token " + token);
+    }
+
+    Feature: Restful-booker CRUD operation check
+      I should be able to check CRUD operation on the website
+
+    Scenario:Verify CRUD operation on Restful-booker application
+      Given I am on home page
+      When  I create a new booking providing username
+    #  When  I create a new booking providing username "<username>" password "<password>"
+    #  Then  I create a new booking providing "<firstname>" "<lastname>" "<total price>" "<deposit paid>" "<additional needs>" "<checkin>" "<checkout>"
+    #  Then  I verify that the booking is created successfully
+    #  And   I update the user with firstname1 "<firstname1>" lastname1 "<lastname1>" total price1 "<total price1>"
+    #  Then  I verify that the booking with firstname1 "<firstname1>" is updated successfully
+    #  When  I delete the updated booking
+    #  Then  I verify that the booking is deleted successfully
+     # Examples:
+     #   |username |password   | #firstname|lastname |total price|deposit paid |additional needs |checkin      |checkout   |
+     #   |admin    |password123| #Keisha   |Paul     |230.44     |true         |Breakfast        |2018-01-01   |2019-01-01 |
