@@ -51,7 +51,7 @@ To run the tests against the 'test' environment using the Chrome browser, use th
 To run a specific feature file against the 'test' environment using the Chrome browser, use the following command:
 
    ```bash
-   mvn clean verify -Denvironment=test -Ddriver=chrome -Dtest=Admin.feature
+   mvn clean verify -Denvironment=test -Ddriver=chrome -Dtest=ShoppingUI.feature
    ```
 
 To run API tests against a specific environment:-
