@@ -8,10 +8,10 @@ Feature: Ordering on Modern Store
     Then user is successfully navigated to MEN category
     And select sort by option average rating
     And select the item Yellow Hoodie
-    And update quantity of Hoodie to "<quantity>" and add items to cart
+    When update quantity of Hoodie to "<quantity>" and add items to cart
     And navigate to shopping cart
     Then verify quantity of item is "10"
-    And update shipping address "<country>" "<state>" "<city>" "<postcode>"
+    When update shipping address "<country>" "<state>" "<city>" "<postcode>"
     Then verify shipping address got updated "<country>" "<state>" "<city>" "<postcode>"
     And proceed to checkout the order
     Then verify checkout message "<checkoutMessage>"

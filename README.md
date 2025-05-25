@@ -31,7 +31,7 @@ To set up the project, follow these steps:
 
     ```bash
     git clone https://github.com/skasam906/assignment-gnd-api-ui.git
-    cd serenity-bdd-project
+    cd assignment-gnd-api-ui
     ```
 
 2. **Install dependencies:**
