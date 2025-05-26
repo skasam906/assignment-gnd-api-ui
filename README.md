@@ -42,21 +42,19 @@ To set up the project, follow these steps:
 
 ## Running Tests
 
+To run API tests :-
+
+   ```bash
+   mvn clean verify -Dtest=CucumberTestSuiteApi
+   ```
+
+To run UI tests :-
+
+   ```bash
+   mvn clean verify -Dtest=CucumberTestSuiteUi
+   ```
 To run the tests against the 'test' environment using the Chrome browser, use the following command:
 
    ```bash
    mvn clean verify -Denvironment=test -Ddriver=chrome
    ```
-
-To run a specific feature file against the 'test' environment using the Chrome browser, use the following command:
-
-   ```bash
-   mvn clean verify -Denvironment=test -Ddriver=chrome -Dtest=ShoppingUI.feature
-   ```
-
-To run API tests against a specific environment:-
-
-   ```bash
-  mvn clean verify -Dapi.base.url=http://localhost:3001
-   ```
-

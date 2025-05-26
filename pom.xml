@@ -62,8 +62,11 @@
                 <version>3.1.2</version>
                 <configuration>
                     <includes>
-                    <!--<include>**/*.feature</include>-->
-                    <include>**/*TestSuite*.java</include>
+                        <include>**/*Test.java</include>
+                        <include>**/Test*.java</include>
+                        <include>**/*TestSuite*.java</include>
+                        <include>**/When*.java</include>
+                        <include>**/*.feature</include>
                 </includes>
                 <forkCount>4</forkCount>
                 <reuseForks>true</reuseForks>
